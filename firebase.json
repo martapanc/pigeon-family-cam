@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "./build",
+    "site": "pigeon-family-cam",
     "ignore": [
       "firebase.json",
       "**/.*",
