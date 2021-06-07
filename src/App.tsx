@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {CSSProperties} from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className={"main"}>
+                <h1>🐦 Pigeon Family Cam 🐦</h1>
+                <img src="http://testphotos.teotaylor.co.uk:8081/" alt={"pigeon family cam"}/>
+            </div>
+            <footer>
+                <a href="https://mpancaldi.co.uk/">Made by Marta P.</a>
+            </footer>
+        </div>
+    );
 }
 
 export default App;
