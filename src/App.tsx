@@ -1,22 +1,31 @@
 import React from 'react';
 import './App.css';
+import pigeons from './assets/pigeons.png';
 
 function App() {
     return (
         <div className="App">
             <div className={"main"}>
-                <h1>
-                    <span className={"mobile-hide"}>🐦&nbsp;</span>
-                    &nbsp;Pigeon Family Cam
-                    <span className={"mobile-hide"}>&nbsp;🐦</span>
-                </h1>
+                <div className={"header"}>
+                    <h1>
+                        <span className={"mobile-hide"}>🐦&nbsp;</span>
+                        &nbsp;Pigeon Family Cam
+                        <span className={"mobile-hide"}>&nbsp;🐦</span>
+                    </h1>
+                </div>
+
                 <div className={"video-section"}>
                     <img className={"video"} src="http://testphotos.teotaylor.co.uk:8081/" alt={"pigeon family cam"}/>
                 </div>
+
+                <div className={"icon-section"}>
+                    <img className={"icon"} src={pigeons} alt={"pigeons"}/>
+                </div>
+
+                <footer>
+                    <a href="https://mpancaldi.co.uk/" target="_blank" rel="noopener noreferrer"><strong>Made by Marta P.</strong></a>
+                </footer>
             </div>
-            <footer>
-                <a href="https://mpancaldi.co.uk/">Made by Marta P.</a>
-            </footer>
         </div>
     );
 }
