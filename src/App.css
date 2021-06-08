@@ -70,6 +70,8 @@
 
 .icon-section {
     margin: 2rem 0;
+    position: absolute;
+    bottom: 2rem;
 }
 
 footer {
