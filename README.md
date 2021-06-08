@@ -1,7 +1,10 @@
 # Pigeon Family Cam 🐦
 
-Live version here: https://pigeon-family-cam.firebaseapp.com/
+Live version here: 
 
+https://pigeon-family-cam.firebaseapp.com/
+
+https://pigeon-family-cam.web.app/
 ## Setup
 
 ```
