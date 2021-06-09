@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import pigeons from './assets/pigeons.png';
+import pigeonFamily from './assets/pigeon_family.png';
 
 function App() {
     return (
@@ -19,7 +20,7 @@ function App() {
                 </div>
 
                 <div className={"icon-section"}>
-                    <img className={"icon"} src={pigeons} alt={"pigeons"}/>
+                    <img className={"icon"} src={pigeonFamily} alt={"pigeons"}/>
                 </div>
 
                 <footer>
