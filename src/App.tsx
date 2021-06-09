@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import pigeons from './assets/pigeons.png';
 import pigeonFamily from './assets/pigeon_family.png';
 
 function App() {
