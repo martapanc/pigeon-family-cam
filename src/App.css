@@ -27,7 +27,7 @@
 
 @media screen and (min-width: 401px) and (max-width: 999px) {
     .video {
-        width: 95%;
+        width: 60%;
     }
 
     .icon {

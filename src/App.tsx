@@ -15,7 +15,8 @@ function App() {
                 </div>
 
                 <div className={"video-section"}>
-                    <img className={"video"} src="http://testphotos.teotaylor.co.uk:8081/" alt={"pigeon family cam"}/>
+                    <img className={"video"} src="https://testphotos.teotaylor.co.uk:8081/stream/video.mjpeg"
+                         alt={"pigeon family cam"}/>
                 </div>
 
                 <div className={"icon-section"}>
@@ -23,7 +24,8 @@ function App() {
                 </div>
 
                 <footer>
-                    <a href="https://mpancaldi.co.uk/" target="_blank" rel="noopener noreferrer"><strong>Made by Marta P.</strong></a>
+                    <a href="https://mpancaldi.co.uk/" target="_blank" rel="noopener noreferrer"><strong>Made by Marta
+                        P.</strong></a>
                 </footer>
             </div>
         </div>
