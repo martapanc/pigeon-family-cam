@@ -24,8 +24,9 @@ function App() {
                 </div>
 
                 <footer>
-                    <a href="https://mpancaldi.co.uk/" target="_blank" rel="noopener noreferrer"><strong>Made by Marta
-                        P.</strong></a>
+                    <a href="https://mpancaldi.co.uk/" target="_blank" rel="noopener noreferrer">
+                        <strong>Made by Marta P.</strong>
+                    </a>
                 </footer>
             </div>
         </div>
