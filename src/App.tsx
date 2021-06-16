@@ -15,7 +15,7 @@ function App() {
                 </div>
 
                 <div className={"video-section"}>
-                    <img className={"video rotate-video-180"} src="https://testphotos.teotaylor.co.uk:8081/stream/video.mjpeg"
+                    <img id="video" className={"video rotate-video-180"} src="https://testphotos.teotaylor.co.uk:8081/stream/video.mjpeg"
                          alt={"pigeon family cam"}/>
                 </div>
 
@@ -34,3 +34,11 @@ function App() {
 }
 
 export default App;
+
+setInterval(function() {
+    const video = document.getElementById('video');
+
+    // @ts-ignore
+    video.src = 'https://testphotos.teotaylor.co.uk:8081/stream/video.mjpeg'
+    console.log("refresh");
+}, 6000);
