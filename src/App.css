@@ -68,6 +68,14 @@
     margin-top: 6rem;
 }
 
+.rotate-video-180 {
+    -webkit-transform:rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
 .icon-section {
     margin: 2rem 0;
     position: absolute;

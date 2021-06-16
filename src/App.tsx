@@ -15,7 +15,7 @@ function App() {
                 </div>
 
                 <div className={"video-section"}>
-                    <img className={"video"} src="https://testphotos.teotaylor.co.uk:8081/stream/video.mjpeg"
+                    <img className={"video rotate-video-180"} src="https://testphotos.teotaylor.co.uk:8081/stream/video.mjpeg"
                          alt={"pigeon family cam"}/>
                 </div>
 
