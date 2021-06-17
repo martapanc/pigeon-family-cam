@@ -41,3 +41,7 @@ setInterval(function() {
     // @ts-ignore
     video.src = 'https://testphotos.teotaylor.co.uk:8081/stream/video.mjpeg'
 }, 6000);
+
+setInterval(function () {
+    window.location.reload();
+}, 30000)
