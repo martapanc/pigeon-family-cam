@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import pigeonFamily from './assets/pigeon_family.png';
+import $ from "jquery";
+import html2canvas from "html2canvas";
+import FileSaver from 'file-saver';
 
 function App() {
     return (
@@ -17,6 +20,7 @@ function App() {
                 <div className={"video-section"}>
                     <img id="video" className={"video rotate-video-180"} src="https://testphotos.teotaylor.co.uk:8081/stream/video.mjpeg"
                          alt={"pigeon family cam"}/>
+                    <input type="button" id="btnSave" value="Save PNG"/>
                 </div>
 
                 <div className={"icon-section"}>
@@ -45,3 +49,25 @@ setInterval(function() {
 setInterval(function () {
     window.location.reload();
 }, 30000)
+
+function saveScreenshot() {
+    // const canvas = document.getElementById('video') as HTMLCanvasElement;
+    // const context = canvas.getContext('2d');
+
+    // @ts-ignore
+    let target = $('#video').toDataURL();
+    window.open('', target);
+}
+
+$(function() {
+    $("#btnSave").click(function() {
+        // @ts-ignore
+        html2canvas($("#widget"), {
+            onrendered: function(canvas: { toBlob: (arg0: (blob: any) => void) => void; }) {
+                canvas.toBlob(function(blob) {
+                    FileSaver.saveAs(blob, "Dashboard.png");
+                });
+            }
+        });
+    });
+});
