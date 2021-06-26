@@ -31,8 +31,9 @@
                 let bytesRead = 0;
 
                 let frames = 0;
+                let runTime = 0;
                 setInterval(() => {
-                    console.log("fps : " + frames);
+                    console.log("Fps: " + frames + " (" + ++runTime + "s)");
                     frames = 0;
                 }, 1000);
 
