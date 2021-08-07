@@ -6,6 +6,8 @@ Live version here:
 https://pigeon-family-cam.firebaseapp.com/
 
 https://pigeon-family-cam.web.app/
+
+Thanks to [@aruntj](https://github.com/aruntj/mjpeg-readable-stream) for providing the base logic for reading a video stream.
 ## Setup
 
 ```
