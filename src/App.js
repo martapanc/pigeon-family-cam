@@ -56,7 +56,7 @@ function loadVideoStream() {
 
             let headers = '';
             let contentLength = -1;
-            let imageBuffer: BlobPart | number[] | null = null;
+            let imageBuffer = null;
             let bytesRead = 0;
 
             let frames = 0;
@@ -69,27 +69,22 @@ function loadVideoStream() {
             const read = () => {
                 reader.read().then(({done, value}) => {
                     if (done) {
-                        // @ts-ignore
+                        // eslint-disable-next-line no-undef
                         controller.close();
                         return;
                     }
 
-                    // @ts-ignore
                     for (let index = 0; index < value.length; index++) {
-                        // @ts-ignore
                         if (value[index] === SOI[0] && value[index + 1] === SOI[1]) {
                             contentLength = getLength(headers);
                             imageBuffer = new Uint8Array(new ArrayBuffer(contentLength));
                         }
-                        if (contentLength <= 0 && value) {
+                        if (contentLength <= 0) {
                             headers += String.fromCharCode(value[index]);
                         } else if (bytesRead < contentLength) {
-                            // @ts-ignore
                             imageBuffer[bytesRead++] = value[index];
                         } else {
-                            // @ts-ignore
                             let blob = new Blob([imageBuffer], {type: TYPE_JPEG});
-                            // @ts-ignore
                             document.getElementById('video').src = URL.createObjectURL(blob);
                             frames++;
                             contentLength = 0;
@@ -108,12 +103,12 @@ function loadVideoStream() {
             console.error(error);
         });
 
-    const getLength = (headers: string) => {
-        let contentLength: number = -1;
+    const getLength = (headers) => {
+        let contentLength = -1;
         headers.split('\n').forEach((header, _) => {
             const pair = header.split(':');
             if (pair[0].toLowerCase() === CONTENT_LENGTH) {
-                contentLength = parseInt(pair[1]);
+                contentLength = pair[1];
             }
         });
         return contentLength;
